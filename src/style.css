@@ -1,0 +1,18 @@
+.gallery {
+    display: flex;
+    /* max-width: 1800px; */
+    flex-wrap: wrap;
+}
+.photo-card {
+    margin-right: 10px;
+}
+.more-btn{ 
+    margin-left: 40%;
+    height: 50px;
+    width: 125px;
+    background-color: aqua;
+    border-radius: 10%;
+}
+.input {
+    margin-left: 40%;
+}
