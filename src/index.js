@@ -36,7 +36,7 @@ function onLoadMore() {
   
 }
 function scrollView () {
-    moreBtnRef.scrollIntoView({
+    listRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       })
