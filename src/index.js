@@ -33,10 +33,10 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    setTimeout(moreBtnRef.scrollIntoView({
+    moreBtnRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
-      }),3000)
+      })
 }
 
 function appendGalleryMarkup(hits) {
