@@ -26,15 +26,15 @@ function onSearch(e) {
 
     galleryApiService.query = e.currentTarget.elements.query.value
     galleryApiService.reseetPage();
-    galleryApiService.fetchGallery().then(appendGalleryMarkup)
-}
-
-function onLoadMore() {
-
     galleryApiService.fetchGallery().then(appendGalleryMarkup).then(   scrol => { moreBtnRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       });})
+}
+
+function onLoadMore() {
+
+    galleryApiService.fetchGallery().then(appendGalleryMarkup)
 
     console.log(a)
 }
