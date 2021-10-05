@@ -32,8 +32,8 @@ function onSearch(e) {
 
 function onLoadMore() {
 
-    galleryApiService.fetchGallery().then(appendGalleryMarkup).then()
-    scrollView()
+    galleryApiService.fetchGallery().then(appendGalleryMarkup).then(scrollView())
+  
 }
 function scrollView () {
     moreBtnRef.scrollIntoView({
