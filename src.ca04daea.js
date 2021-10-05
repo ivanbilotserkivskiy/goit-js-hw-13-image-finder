@@ -26,4 +26,4 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"dskh"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=r(require("../src/templates/picturesTpl.hbs")),t=r(require("./apiService"));function r(e){return e&&e.__esModule?e:{default:e}}const n=require("lodash"),u=document.querySelector(".search-form"),c=document.querySelector(".gallery"),l=document.querySelector("input"),s=document.querySelector(".more-btn"),o=document.querySelector(".search-btn");u.addEventListener("submit",i),s.addEventListener("click",d);const a=new t.default;function i(e){e.preventDefault(),a.query=e.currentTarget.elements.query.value,a.reseetPage(),a.fetchGallery().then(f)}function d(){a.fetchGallery().then(f)}function f(t){c.insertAdjacentHTML("beforeend",(0,e.default)(t)),onScroll()}
 },{"./sass/main.scss":"clu1","../src/templates/picturesTpl.hbs":"HOHu","./apiService":"WgT8","lodash":"B1iE"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.051881db.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.ca04daea.js.map
