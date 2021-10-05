@@ -33,7 +33,7 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    setTimeout(scroll(),5000)
+    _.throttle(scroll(),500)
 }
 
 function appendGalleryMarkup(hits) {
