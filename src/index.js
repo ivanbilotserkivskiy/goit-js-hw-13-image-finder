@@ -18,7 +18,7 @@ formRef.addEventListener('submit', onSearch)
 moreBtnRef.addEventListener('click', onLoadMore)
 
 
-}
+
 const galleryApiService = new GalleryApiService()
 
 function onSearch(e) {
@@ -30,12 +30,6 @@ function onSearch(e) {
 }
 
 function onLoadMore() {
-    
-function onScroll() {
-    moreBtnRef.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
     
 }
