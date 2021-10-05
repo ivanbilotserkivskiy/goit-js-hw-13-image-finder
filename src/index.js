@@ -32,9 +32,14 @@ function onSearch(e) {
 
 function onLoadMore() {
 
-    galleryApiService.fetchGallery().then(appendGalleryMarkup).then(scrollView())
-  
-}
+    galleryApiService.fetchGallery().then(appendGalleryMarkup)
+        setTimeout(() => {
+            listRef.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+              })
+        },2000)
+    }
 function scrollView () {
     listRef.scrollIntoView({
         behavior: 'smooth',
