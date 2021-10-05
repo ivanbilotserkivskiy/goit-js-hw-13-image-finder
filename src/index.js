@@ -30,7 +30,14 @@ function onSearch(e) {
 }
 
 function onLoadMore() {
+
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
+    function onScroll() {
+        moreBtnRef.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+          });
+    }
     
 }
 
