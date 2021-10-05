@@ -17,7 +17,12 @@ const searchBtnRef = document.querySelector('.search-btn')
 formRef.addEventListener('submit', onSearch)
 moreBtnRef.addEventListener('click', onLoadMore)
 
-
+function onScroll() {
+    moreBtnRef.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      });
+}
 
 const galleryApiService = new GalleryApiService()
 
@@ -32,12 +37,7 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    function onScroll() {
-        moreBtnRef.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end',
-          });
-    }
+
     
 }
 
