@@ -36,7 +36,7 @@ function onLoadMore() {
     setTimeout(listRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
-      }),500)
+      }),5000)
 }
 
 function appendGalleryMarkup(hits) {
