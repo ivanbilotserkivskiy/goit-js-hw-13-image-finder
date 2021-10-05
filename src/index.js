@@ -33,7 +33,7 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    setTimeout(scroll(),1000)
+    scroll()
 }
 
 function appendGalleryMarkup(hits) {
@@ -42,7 +42,7 @@ function appendGalleryMarkup(hits) {
 }
 
 function scroll () {
-    listRef.scrollIntoView({
+    bodyRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       })
