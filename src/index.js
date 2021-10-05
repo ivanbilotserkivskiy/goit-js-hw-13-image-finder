@@ -38,9 +38,9 @@ function onLoadMore() {
 
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
-    listRef.scrollIntoView({
+    setInterval(listRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
-      })
+      }),1000)
 }
 
