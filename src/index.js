@@ -32,13 +32,15 @@ function onSearch(e) {
 
 function onLoadMore() {
 
-    galleryApiService.fetchGallery().then(appendGalleryMarkup)
+    galleryApiService.fetchGallery().then(appendGalleryMarkup).then()
+    scrollView()
+}
+function scrollView () {
     moreBtnRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       })
 }
-
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
 
