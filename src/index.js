@@ -35,12 +35,6 @@ function onLoadMore() {
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
 
     }
-function scrollView () {
-    listRef.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      })
-}
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
     setTimeout(() => {
