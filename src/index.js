@@ -26,22 +26,21 @@ function onSearch(e) {
 
     galleryApiService.query = e.currentTarget.elements.query.value
     galleryApiService.reseetPage();
-    galleryApiService.fetchGallery().then(appendGalleryMarkup).then(   scrol => { moreBtnRef.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
-      return scrol
-    })
+    galleryApiService.fetchGallery().then(appendGalleryMarkup)
+
 }
 
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
 
-    console.log(a)
 }
 
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
+    listRef.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      })
 }
 
