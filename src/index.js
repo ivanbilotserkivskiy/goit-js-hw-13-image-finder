@@ -44,6 +44,6 @@ function appendGalleryMarkup(hits) {
 function scroll () {
     bodyRef.scrollIntoView({
         behavior: 'smooth',
-        block: 'end',
+        block: 'start',
       })
 }
