@@ -44,7 +44,7 @@ function scrollView () {
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
     setTimeout(() => {
-        listRef.scrollIntoView({
+        moreBtnRef.scrollIntoView({
             behavior: 'smooth',
             block: 'end',
           })
