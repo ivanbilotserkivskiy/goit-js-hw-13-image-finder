@@ -29,7 +29,9 @@ function onSearch(e) {
     galleryApiService.fetchGallery().then(appendGalleryMarkup).then(   scrol => { moreBtnRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
-      });})
+      });
+      return scrol
+    })
 }
 
 function onLoadMore() {
