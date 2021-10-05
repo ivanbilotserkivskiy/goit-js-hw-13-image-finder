@@ -43,7 +43,7 @@ function scrollView () {
 }
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
-    scrollView()
+    setTimeout(scrollView(),1000)
 
 }
 
