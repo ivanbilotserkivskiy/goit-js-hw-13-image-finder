@@ -32,6 +32,9 @@ export default class GalleryApiService {
     })
     .catch(error => console.log(error))
 }
+reseetPage() {
+    this.page = 1
+}
 get query () {
     return this.searchQuery;
 }

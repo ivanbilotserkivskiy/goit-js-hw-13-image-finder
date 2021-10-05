@@ -32,7 +32,7 @@ function onSearch(e) {
     // const searchQuery = e.currentTarget.elements.query.value
     // galleryApiService.query = inputRef.value
     galleryApiService.query = e.currentTarget.elements.query.value
-
+    galleryApiService.reseetPage();
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
 }
 
