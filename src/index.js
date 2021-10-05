@@ -18,25 +18,24 @@ formRef.addEventListener('submit', onSearch)
 moreBtnRef.addEventListener('click', onLoadMore)
 
 
-function onScroll() {
-    moreBtnRef.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
 }
 const galleryApiService = new GalleryApiService()
 
 function onSearch(e) {
     e.preventDefault();
 
-    // const searchQuery = e.currentTarget.elements.query.value
-    // galleryApiService.query = inputRef.value
     galleryApiService.query = e.currentTarget.elements.query.value
     galleryApiService.reseetPage();
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
 }
 
 function onLoadMore() {
+    
+function onScroll() {
+    moreBtnRef.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      });
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
     
 }
