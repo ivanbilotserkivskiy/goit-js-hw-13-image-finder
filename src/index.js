@@ -10,9 +10,9 @@ const _ = require('lodash');
 
 const formRef = document.querySelector('.search-form')
 const listRef = document.querySelector('.gallery')
-const inputRef = document.querySelector('input')
 const moreBtnRef = document.querySelector('.more-btn')
-const searchBtnRef = document.querySelector('.search-btn')
+const bodyRef = document.querySelector('body')
+
 
 formRef.addEventListener('submit', onSearch)
 moreBtnRef.addEventListener('click', onLoadMore)
@@ -33,14 +33,17 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-
+    scroll()
 }
 
 function appendGalleryMarkup(hits) {
     listRef.insertAdjacentHTML('beforeend', galleryTpl(hits))
-    setInterval(listRef.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      }),1000)
+
 }
 
+function scroll () {
+    listRef.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      })
+}
