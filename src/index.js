@@ -33,7 +33,7 @@ function onSearch(e) {
 function onLoadMore() {
 
     galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    _.throttle(listRef.scrollIntoView({
+    setTimeout(listRef.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       }),500)
