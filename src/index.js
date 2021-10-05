@@ -32,8 +32,8 @@ function onSearch(e) {
 
 function onLoadMore() {
 
-    galleryApiService.fetchGallery().then(appendGalleryMarkup)
-    scroll()
+    galleryApiService.fetchGallery().then(appendGalleryMarkup).then(scroll())
+ 
 }
 
 function appendGalleryMarkup(hits) {
