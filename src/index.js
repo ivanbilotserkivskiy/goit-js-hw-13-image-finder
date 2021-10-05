@@ -48,7 +48,7 @@ function appendGalleryMarkup(hits) {
             behavior: 'smooth',
             block: 'end',
           })
-    },2000)
+    },500)
 
 }
 
